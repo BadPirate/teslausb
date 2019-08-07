@@ -2,16 +2,11 @@
 
 ## Changes
 
-This fork contains the following changes compared to the upstream [cimryan/teslausb](https://github.com/cimryan/teslausb):
-1. Supports Tesla firmware 2019.x
-1. Supports exporting the recordings as a CIFS share
-1. Supports automatically syncing music from a CIFS share folder
-1. Supports using the Tesla API to keep the car awake during archiving
-1. Status indicator while running
-1. Easier and more flexible way to specify sizes of camera and music disks
-1. Support for Gotify and IFTTT in addition to Pushover for notifications
+This fork contains the following changes compared to the upstream [marcone/teslausb](https://github.com/marcone/teslausb):
 
-It is recommended to use the [prebuilt image](https://github.com/marcone/teslausb/releases) and [one step setup instructions](https://github.com/marcone/teslausb/blob/main-dev/doc/OneStepSetup.md) to get started, as the instructions below may be outdated.
+None (yet)
+
+It is recommended to use the [prebuilt image](https://github.com/badpirate/teslausb/releases) and [one step setup instructions](https://github.com/badpirate/teslausb/blob/main-dev/doc/OneStepSetup.md) to get started, as the instructions below may be outdated.
 
 
 ## Intro
@@ -23,7 +18,7 @@ You can configure a Raspberry Pi Zero W so that your Tesla thinks it's a USB dri
 
 Archiving the clips can take from seconds to hours depending on how many clips you've saved and how strong the WiFi signal is in your Tesla. If you find that the clips aren't getting completely transferred before the car powers down after you park or before you leave you can use the Tesla app to turn on the Climate control. This will send power to the Raspberry Pi, allowing it to complete the archival operation.
 
-Alternatively, you can provide your Tesla account credentials and VIN in TeslaUSB's settings, which will allow it to use the [Tesla API](https://tesla-api.timdorr.com) to keep the car awake while the files transfer. Instructions are available in the [one step setup instructions](https://github.com/marcone/teslausb/blob/main-dev/doc/OneStepSetup.md)
+Alternatively, you can provide your Tesla account credentials and VIN in TeslaUSB's settings, which will allow it to use the [Tesla API](https://tesla-api.timdorr.com) to keep the car awake while the files transfer. Instructions are available in the [one step setup instructions](https://github.com/badpirate/teslausb/blob/main-dev/doc/OneStepSetup.md)
 
 ## Contributing
 You're welcome to contribute to this repo by submitting pull requests and creating issues.
@@ -53,7 +48,7 @@ Optional:
 ### Software
 Download: [Raspbian Stretch Lite](https://www.raspberrypi.org/downloads/raspbian/)
 
-**NOTE:** it is highly recommended that you use the [prebuilt teslausb image](https://github.com/marcone/teslausb/releases) instead and follow the [one step headless setup process](https://github.com/marcone/teslausb/blob/main-dev/doc/OneStepSetup.md).
+**NOTE:** it is highly recommended that you use the [prebuilt teslausb image](https://github.com/badpirate/teslausb/releases) instead and follow the [one step headless setup process](https://github.com/badpirate/teslausb/blob/main-dev/doc/OneStepSetup.md).
 
 Download and install: [Etcher](http://etcher.io)
 
@@ -132,7 +127,7 @@ Make sure that whatever you speicfy for the new hostname is compliant with the r
     ```
     mkdir -p /root/bin
     cd /root/bin
-    wget https://raw.githubusercontent.com/marcone/teslausb/main-dev/setup/pi/setup-teslausb
+    wget https://raw.githubusercontent.com/badpirate/teslausb/main-dev/setup/pi/setup-teslausb
     chmod +x setup-teslausb
     ./setup-teslausb
     ```
