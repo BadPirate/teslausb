@@ -119,7 +119,6 @@ do
   for v in $f*front.mp4; do
     time /root/bin/crunch.sh $v -m $_arg_motion| sed 's/^/  /'
   done
-  fi
 done
 
 # ] <-- needed because of Argbash
