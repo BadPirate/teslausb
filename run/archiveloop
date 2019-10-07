@@ -268,7 +268,7 @@ function disconnect_usb_drives_from_host () {
 function crunch () {
   log "Using FFMPEG to crunch clips"
   cd /root/bin
-  ./badcam.sh "$CAM_MOUNT/TeslaCam"
+  ./badcam.sh "$CAM_MOUNT/TeslaCam" | xargs -n log
   cd -
 }
 
@@ -408,6 +408,7 @@ export -f log
 echo "==============================================" >> "$LOG_FILE"
 log "Starting archiveloop..."
 
+log "Crunching..."
 crunch
 
 if archive_is_reachable
