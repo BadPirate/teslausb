@@ -115,14 +115,10 @@ assign_positional_args 1 "${_positionals[@]}"
 
 for f in $_arg_root/*/
 do
-  if [[ $f =~ \/(([0-9]{4}-[0-9]{2}-[0-9]{2})_([0-9]{2}-[0-9]{2}-[0-9]{2}))\/$ ]]; then
-    _folder=${BASH_REMATCH[1]}
-    _date=${BASH_REMATCH[2]}
-    _time=${BASH_REMATCH[3]}
-    echo "Video Folder: $_folder"
-    for v in $f*front.mp4; do
-      time /root/bin/crunch.sh $v -m $_arg_motion| sed 's/^/  /'
-    done
+  echo "Video Folder: $f"
+  for v in $f*front.mp4; do
+    time /root/bin/crunch.sh $v -m $_arg_motion| sed 's/^/  /'
+  done
   fi
 done
 
