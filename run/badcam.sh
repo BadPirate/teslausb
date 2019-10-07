@@ -121,7 +121,7 @@ do
     _time=${BASH_REMATCH[3]}
     echo "Video Folder: $_folder"
     for v in $f*front.mp4; do
-      time ./crunch.sh $v -m $_arg_motion| sed 's/^/  /'
+      time /root/bin/crunch.sh $v -m $_arg_motion| sed 's/^/  /'
     done
   fi
 done
