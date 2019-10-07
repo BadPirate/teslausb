@@ -268,7 +268,7 @@ function disconnect_usb_drives_from_host () {
 function crunch () {
   log "Using FFMPEG to crunch clips"
   cd /root/bin
-  /root/bin/badcam.sh >> "$CAM_MOUNT/TeslaCam" 
+  /root/bin/badcam.sh "$CAM_MOUNT/TeslaCam" >> "$LOG_FILE"
   cd -
 }
 
